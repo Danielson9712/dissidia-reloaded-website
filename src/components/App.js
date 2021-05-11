@@ -1,6 +1,9 @@
 import firebase from 'firebase';
-
+import React, {useState, useEffect} from 'react';
+//components 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-tTDGr6lbMP9klqQdC8uOXym4B8mJzbo",
@@ -11,7 +14,7 @@ function App() {
     appId: "1:989798867747:web:5c22f9d93b47685c1ae296",
     measurementId: "G-0HBL1RLW5T"
   };
-
+  //Initialize firebase 
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
   } else {
@@ -19,7 +22,18 @@ function App() {
 
   }
 
+  useEffect(() => { 
 
+    firebase.auth().onAuthStateChanged((user) => { 
+      if (!user) { 
+        setLoggedIn(false)
+      }
+      else { 
+        setLoggedIn(true)
+      }
+    })
+  });
+  
   return (
     <div className="App">
       <h1> Welcome back to DissidiaCraft! </h1>
