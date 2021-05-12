@@ -1,7 +1,14 @@
 import firebase from 'firebase';
 import React, {useState, useEffect} from 'react';
 import {Button } from 'reactstrap';
+import { BrowserRouter, Router, Route} from 'react-router-dom';
 //components 
+import Dash from './components/Dash';
+import Register from './components/Register';
+import Login from './components/Login'; 
+import NavBar from './components/Navbar';
+import Footer from './components/Footer';
+
 function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
@@ -37,8 +44,13 @@ function App() {
   
   return (
     <div className="App">
-      <Button color ="primary" size = "sm"> </Button>
-      <h1> Welcome back to DissidiaCraft! </h1>
+      <NavBar/>
+      <Router> 
+        <Route exact path = "/" component ={Dash} />
+        <Route path = "/Login" component = {Login}/>
+        <Route path = "/Register" component = {Register}/>
+      </Router>
+      <Footer/>
     </div>
   );
 }
