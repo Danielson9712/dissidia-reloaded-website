@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import React, {useState, useEffect} from 'react';
+import {Button } from 'reactstrap';
 //components 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
   
   return (
     <div className="App">
+      <Button color ="primary" size = "sm"> </Button>
       <h1> Welcome back to DissidiaCraft! </h1>
     </div>
   );
