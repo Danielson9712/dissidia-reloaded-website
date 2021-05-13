@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import React, {useState, useEffect} from 'react';
 import {Button } from 'reactstrap';
-import { BrowserRouter, Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 //components 
 import Dash from './components/Dash';
 import Register from './components/Register';
@@ -29,23 +29,11 @@ function App() {
     firebase.app(); // if already initialized, use that one
 
   }
-
-  useEffect(() => { 
-
-    firebase.auth().onAuthStateChanged((user) => { 
-      if (!user) { 
-        setLoggedIn(false)
-      }
-      else { 
-        setLoggedIn(true)
-      }
-    })
-  });
   
   return (
-    <div className="App">
-      <NavBar/>
+    <div className="App"> 
       <Router> 
+      <NavBar/>
         <Route exact path = "/" component ={Dash} />
         <Route path = "/Login" component = {Login}/>
         <Route path = "/Register" component = {Register}/>

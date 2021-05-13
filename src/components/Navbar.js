@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Collapse,
   NavbarToggler,
@@ -6,25 +6,49 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText,
   Navbar
 } from 'reactstrap';
+import firebase from 'firebase';
+import { useHistory, Link} from 'react-router-dom';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const history = useHistory();
 
   const toggle = () => setIsOpen(!isOpen);
+  const toLogin = () => {history.push('/Login')}
 
+  const signOut = () => { 
+    firebase.auth().signOut().then(() => {
+      console.log("I signed out")
+      history.push('/');
+// Sign-out successful.
+      }).catch((error) => {
+// An error happened.
+});
+  }
+  useEffect(() => { 
+
+    firebase.auth().onAuthStateChanged((user) => { 
+      if (!user) { 
+        setLoggedIn(false)
+        
+      }
+      else { 
+        setLoggedIn(true)
+        
+      }
+    })
+  });
+  
   return (
     <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">reactstrap</NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse isOpen = {isOpen} navbar> 
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/components/">Components</NavLink>
@@ -32,26 +56,12 @@ const NavBar = () => {
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+              {!loggedIn ? 
+               <NavLink> <Link to = '/Login' className = 'inactive'> Login/Register</Link> </NavLink>  
+               : 
+              <NavLink> <Link onClick = {signOut} className = 'inactive'>Logout </Link> </NavLink> }
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
+          </Collapse>
       </Navbar>
     </div>
   );
