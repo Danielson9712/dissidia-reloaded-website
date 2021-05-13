@@ -27,6 +27,9 @@ const Register = () => {
         })
 
     }
+    const toHome = () => { history.push('/')}
+    const toLogin = () => { history.push('/Login')}
+
     return ( 
         <div className = "register"> 
         <Form> 
@@ -53,6 +56,11 @@ const Register = () => {
 
             <Button onClick={onSubmit} 
             color="info" > Register </Button>
+            <Button onClick = {toHome}
+            color = "info"> Back to Home</Button>
+            <Button onClick = {toLogin}
+            color = "info"> Back to Login</Button>
+            
             </FormGroup>
         </Form>
         </div>

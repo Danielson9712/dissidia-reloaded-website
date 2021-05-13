@@ -6,7 +6,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText,
   Navbar
 } from 'reactstrap';
 import firebase from 'firebase';
@@ -18,7 +17,6 @@ const NavBar = () => {
   const history = useHistory();
 
   const toggle = () => setIsOpen(!isOpen);
-  const toLogin = () => {history.push('/Login')}
 
   const signOut = () => { 
     firebase.auth().signOut().then(() => {
@@ -45,8 +43,14 @@ const NavBar = () => {
   
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar color="color.nav" variant = "dark" expand="md">
+        <Link to ="/">
+        <NavbarBrand className = 'brand'> 
+        {/* <img src = {logo} alt = "logo"/> */}
+        DissidiaReloaded
+        </NavbarBrand>
+      </Link>
+
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen = {isOpen} navbar> 
           <Nav className="mr-auto" navbar>
