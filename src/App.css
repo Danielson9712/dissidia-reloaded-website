@@ -1,0 +1,8 @@
+.nav { 
+   background-color: maroon;
+   text-decoration: none; 
+}
+body { 
+   background-image: url(images/sitebackground.jpg); 
+   background-size: cover;
+}

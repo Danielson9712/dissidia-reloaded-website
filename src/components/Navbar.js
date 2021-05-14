@@ -42,8 +42,7 @@ const NavBar = () => {
   });
   
   return (
-    <div>
-      <Navbar color="color.nav" variant = "dark" expand="md">
+      <Navbar className = "nav" color="color.nav" variant = "dark" expand="md">
         <Link to ="/">
         <NavbarBrand className = 'brand'> 
         {/* <img src = {logo} alt = "logo"/> */}
@@ -58,7 +57,7 @@ const NavBar = () => {
               <NavLink href="/components/">Components</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink> </NavLink>
             </NavItem>
               {!loggedIn ? 
                <NavLink> <Link to = '/Login' className = 'inactive'> Login/Register</Link> </NavLink>  
@@ -67,7 +66,6 @@ const NavBar = () => {
           </Nav>
           </Collapse>
       </Navbar>
-    </div>
   );
 }
 

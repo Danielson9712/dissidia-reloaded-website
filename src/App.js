@@ -32,6 +32,7 @@ function App() {
   
   return (
     <div className="App"> 
+    
       <Router> 
       <NavBar/>
         <Route exact path = "/" component ={Dash} />
@@ -39,7 +40,8 @@ function App() {
         <Route path = "/Register" component = {Register}/>
       </Router>
       <Footer/>
-    </div>
+      </div>
+  
   );
 }
 
