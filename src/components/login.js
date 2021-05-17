@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import {useHistory} from 'react-router-dom';
 import {Button, Form, FormGroup, Row, Input} from 'reactstrap';
-
+import serverlogo from '../images/serverlogo.webp';
 
 const Login = () => { 
 
@@ -43,28 +43,34 @@ const Login = () => {
         <div> 
             <Form> 
         <FormGroup>
-          
-            <div className="title"> 
+    <div className = "title"> 
               <h1> Dissidia Login</h1>
-              </div>
+          </div>  
+          <div className = "login">   
           <Row>
-            <Input onChange={(value) => setEmail(value.target.value)}
+            <Input onChange={(e) => setEmail(e.target.value)}
               type="Email"
               name="email"
               placeholder="Email" />
           </Row>
           <Row> 
-            <Input onChange={(value) => setPassword(value.target.value)}
+            <Input onChange={(e) => setPassword(e.target.value)}
               type="password"
               name="Password"
               placeholder="Password" />
             </Row>
-            <Button onClick={authLogin} color="info"> Sign in </Button>
-            <Button color = "info" onClick = {toHome}> Back to Home</Button>
-            <Button color = "info" onClick = {toRegister}> Sign up</Button>
-            <Button color = "info" onClick = {googleLogin}> Sign in with google</Button>
+           <div className = "button"> 
+            <Button onClick={authLogin} color="primary"> Sign in </Button>
+            <Button color = "primary" onClick = {toRegister}> Sign up</Button>
+            <br></br>
+            <Button color = "primary" onClick = {googleLogin}> Sign in with google</Button>
+        </div>
+        <img className = "logo" src = {serverlogo}  alt = "logo"/>
+        </div>
+        
         </FormGroup>
         </Form> 
+        
         </div>
     );
 }

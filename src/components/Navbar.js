@@ -43,8 +43,8 @@ const NavBar = () => {
   
   return (
       <Navbar className = "nav" color="color.nav" variant = "dark" expand="md">
-        <Link to ="/">
-        <NavbarBrand className = 'brand'> 
+        <Link className = "link" to ="/">
+        <NavbarBrand className = 'link'> 
         {/* <img src = {logo} alt = "logo"/> */}
         DissidiaReloaded
         </NavbarBrand>
@@ -54,15 +54,12 @@ const NavBar = () => {
         <Collapse isOpen = {isOpen} navbar> 
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink> </NavLink>
+              <NavLink> <Link className = "link" to = '/Forums'> Forums</Link>  </NavLink> 
             </NavItem>
               {!loggedIn ? 
-               <NavLink> <Link to = '/Login' className = 'inactive'> Login/Register</Link> </NavLink>  
+               <NavLink> <Link className = "link" to = '/Login' > Login/Register</Link> </NavLink>  
                : 
-              <NavLink> <Link onClick = {signOut} className = 'inactive'>Logout </Link> </NavLink> }
+              <NavLink> <Link className = "link" onClick = {signOut}> Logout </Link> </NavLink> }
           </Nav>
           </Collapse>
       </Navbar>

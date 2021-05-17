@@ -1,8 +1,50 @@
 .nav { 
    background-color: maroon;
-   text-decoration: none; 
+}
+.link { 
+   text-decoration: none;
+   color: white;
+}
+
+.link:hover { 
+   color: grey;
 }
 body { 
    background-image: url(images/sitebackground.jpg); 
    background-size: cover;
+}
+
+.dash { 
+   color: white;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   
+}
+
+.login { 
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+}
+
+.button { 
+   color:blue
+}
+
+.title { 
+   color: white;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+}
+
+.logo { 
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
 }

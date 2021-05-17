@@ -34,6 +34,9 @@ const Register = () => {
         <div className = "register"> 
         <Form> 
             <FormGroup> 
+            <div className="title"> 
+              <h1> Dissidia Login</h1>
+              </div>
             <Input onChange = {(e) => setFirstName(e.target.value)} 
             type = "text"
             name = "firstname"
