@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import {useHistory} from 'react-router-dom';
-import {Button, Form, FormGroup, Row, Input} from 'reactstrap';
+import {Button, Form, FormGroup, Row, Input, Jumbotron} from 'reactstrap';
 import serverlogo from '../images/serverlogo.webp';
 
 const Login = () => { 
@@ -41,6 +41,7 @@ const Login = () => {
 
     return ( 
         <div> 
+          <Jumbotron> </Jumbotron>
             <Form> 
         <FormGroup>
     <div className = "title"> 

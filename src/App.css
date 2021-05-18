@@ -47,4 +47,42 @@ body {
    align-items: center;
    text-align: center;
    flex-direction: column;
+   width: 25rem;
+   height: 16.25rem;
 }
+
+.jumbo { 
+   width: 20rem;
+   height: 20rem;
+   background: grey;
+   border-radius:15%;
+   margin-left: 77rem;
+   position:flex;
+}
+
+.alert { 
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   width: 10rem;
+   display: flex;
+   margin-left: 6rem;
+}
+
+.fixRow {
+   margin-right: 12px !important;
+   max-width: 80%;
+ }
+.footer { 
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+ .footer h3, p { 
+    color: white;
+ }
+
+ .modalLine { 
+    flex-direction: row;
+    margin-left: 3rem;
+    margin-right: 3rem;
+ } 

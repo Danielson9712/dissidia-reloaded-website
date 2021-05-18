@@ -1,24 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import firebase from 'firebase'; 
-import { Button, Alert, Jumbotron } from 'reactstrap';
+import { Button, Alert, Jumbotron, Row, Col } from 'reactstrap';
 import {useHistory } from 'react-router-dom';
 import serverlogo from '../images/serverlogo.webp';
 import axios from 'axios';
+import PlayerModal from './PlayerModal';
 
-const Dash = () => { 
+const Dash = (props) => { 
 const [players, setPlayers] = useState("");
 const [online, setOnline] = useState(false);
-const [hostname, setHostName] = useState("");
 const [version, setVersion] = useState(""); 
 const [max, setMax] = useState("");
 
     useEffect(() => { 
-        axios.get('https://api.mcsrvstat.us/2/play.dissidiareloaded.com').then((res) => {
+        axios.get('https://mcapi.us/server/status?ip=play.dissidiareloaded.com').then((res) => {
             console.log(res);
-            setHostName(res.data.hostname)
             setOnline(res.data.online)
-            setPlayers(res.data.players.online)
+            setPlayers(res.data.players.now)
             setMax(res.data.players.max)
+            setVersion(res.data.server.name)
             
         })
         .catch((error) => { 
@@ -27,27 +27,30 @@ const [max, setMax] = useState("");
     },[])
     
     const refresh = () => { 
-        setTimeout(5000)
+        
     }
 
     return ( 
         <div className = "dash"> 
             <h1> Welcome to DissidiaReloaded!</h1>
-            <h2> IP: {hostname} </h2> 
-            <img src = {serverlogo} alt = "logo"/>
+            <h2>play.dissidareloaded.com </h2> 
+            <img className = "logo" src = {serverlogo} alt = "logo"/>
             
-            <Jumbotron onChange = {refresh}>
-            <h1> Server Info</h1>
-            <h3> Server Name: {hostname} </h3>
-              <h3> Status:</h3> 
+            <Jumbotron fluid className = "jumbo">
+            <Row> <h1> Server Info</h1> </Row>
+            <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
+            <Row> <h4> Version: {version}</h4></Row> 
+            <Row className = "modalLine"> <Col> <h4> Players: {players}/{max}</h4></Col>
+               <Col> <PlayerModal/></Col></Row> 
+            <Row>
             { online ? 
-               <Alert color = "success"> Online </Alert>
+               <Alert className = "alert" color = "success"> Status: Online </Alert>
                : 
-               <Alert color = "danger "> Offline </Alert> } 
-               <h4> Players: {players}/{max} </h4>
+               <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
+               <h5> Vote for the server here!</h5>
             </Jumbotron> 
-            
         </div>
+        
     );
 }
 export default Dash; 

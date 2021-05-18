@@ -56,6 +56,9 @@ const NavBar = () => {
             <NavItem>
               <NavLink> <Link className = "link" to = '/Forums'> Forums</Link>  </NavLink> 
             </NavItem>
+            <NavItem>
+              <NavLink> <Link className = "link" to = '/About'>About </Link>  </NavLink> 
+            </NavItem>
               {!loggedIn ? 
                <NavLink> <Link className = "link" to = '/Login' > Login/Register</Link> </NavLink>  
                : 
