@@ -18,16 +18,10 @@ const PlayerModal = () => {
             setUid(res.data.players.sample[0].id)
             console.log(res.data.players.sample)
             console.log(players)
+            setImg(`https://crafatar.com/avatars/${res.data.players.sample[0].id}`)
         })
         .catch((error) => { 
             console.log(error); 
-        })
-        axios.get(`https://crafatar.com/avatars/${uid}`).then((res) => {
-            setImg(res)
-            console.log(res);
-        })
-        .catch((error) => { 
-            console.log(error);
         })
         
     },[])
