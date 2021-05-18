@@ -86,3 +86,15 @@ body {
     margin-left: 3rem;
     margin-right: 3rem;
  } 
+
+ .head { 
+    margin-left: 10rem;
+ }
+
+ .playerName { 
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   margin-top: 1rem;
+   margin-right: 3rem;
+ }

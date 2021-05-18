@@ -1,12 +1,11 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios'; 
-import { Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalHeader, Row, Col } from 'reactstrap';
 import firebase from 'firebase';
 const PlayerModal = () => { 
 
     const [modal, setModal] = useState(false); 
     const [players, setPlayers] = useState([{}]);
-    const [uid, setUid] = useState("");
     const [img, setImg] = useState("");
 
     const toggle = () => setModal(!modal);
@@ -15,16 +14,16 @@ const PlayerModal = () => {
         axios.get('https://mcapi.us/server/status?ip=play.dissidiareloaded.com').then((res) => {
             console.log(res);
             setPlayers(res.data.players.sample)
-            setUid(res.data.players.sample[0].id)
             console.log(res.data.players.sample)
             console.log(players)
+
         })
         .catch((error) => { 
             console.log(error); 
         })
-        axios.get(`https://crafatar.com/avatars/${uid}`).then((res) => {
-            setImg(res)
-            console.log(res);
+        axios.get(`https://minotar.net/avatar/${players[0].id}`).then((res) => {
+            setImg(`https://minotar.net/avatar/${players[0].id}/75`)
+            console.log(img);
         })
         .catch((error) => { 
             console.log(error);
@@ -40,8 +39,9 @@ const PlayerModal = () => {
         { players.map(player => {
             return ( 
                 <>
-            <h4> {players[0].name} </h4>
-            <img src = {img} alt="player head"/> 
+            <Row><Col><h3 className = "playerName"> {players[0].name} </h3> </Col>
+            <Col> <img src = {img} alt="player head" className = "head"/> </Col> </Row>
+            
             </>
             )
         })
