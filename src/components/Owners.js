@@ -10,12 +10,15 @@ const [timskin, setTimSkin] = useState("");
 
 
     return ( 
-        <Jumbotron className = "owners"> 
+        <div className = "owners"> 
         <Row> 
         <h3> Server Admins: </h3>
         <h4> Danielson9712</h4>
+        <h3> Dhluigi</h3>
+        <h3> Server Builder: </h3>
+        <h3> Timster333 </h3>
         </Row>
-    </Jumbotron>
+    </div>
     );
 }
 

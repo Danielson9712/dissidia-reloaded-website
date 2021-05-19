@@ -32,10 +32,9 @@ const [max, setMax] = useState("");
     }
 
     return ( 
-        <div>
-        <Owners/>
+        <div>  <Owners/>
         <div className = "dash"> 
-        <Row> </Row>
+      
             <h1> Welcome to DissidiaReloaded!</h1>
             <h2>play.dissidareloaded.com </h2> 
             <img className = "logo" src = {serverlogo} alt = "logo"/>
@@ -55,7 +54,7 @@ const [max, setMax] = useState("");
                <Row> <h4> Version: {version}</h4></Row> 
             <Row className = "modalLine"> 
             <Col> <h4> Players: {players}/{max}</h4></Col>
-               <Col> <PlayerModal/></Col>
+                <PlayerModal/>
                </Row> 
                </div>
                : 
