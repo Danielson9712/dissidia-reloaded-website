@@ -39,12 +39,17 @@ const [max, setMax] = useState("");
             <Jumbotron fluid className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
-            <Row> <h4> Version: {version}</h4></Row> 
-            <Row className = "modalLine"> <Col> <h4> Players: {players}/{max}</h4></Col>
-               <Col> <PlayerModal/></Col></Row> 
+            
             <Row>
             { online ? 
+            <div> 
                <Alert className = "alert" color = "success"> Status: Online </Alert>
+               <Row> <h4> Version: {version}</h4></Row> 
+            <Row className = "modalLine"> 
+            <Col> <h4> Players: {players}/{max}</h4></Col>
+               <Col> <PlayerModal/></Col>
+               </Row> 
+               </div>
                : 
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
                <h5> Vote for the server here!</h5>

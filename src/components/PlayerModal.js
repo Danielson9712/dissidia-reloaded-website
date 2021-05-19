@@ -22,7 +22,7 @@ const PlayerModal = () => {
             console.log(error); 
         })
         axios.get(`https://minotar.net/avatar/${players[0].id}`).then((res) => {
-            setImg(`https://minotar.net/avatar/${players[0].id}/75`)
+            setImg(`https://minotar.net/avatar/${res.data.players[0].id}/75`)
             console.log(img);
         })
         .catch((error) => { 
