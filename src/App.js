@@ -8,11 +8,8 @@ import Register from './components/Register';
 import Login from './components/Login'; 
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
-import PlayerModal from './components/PlayerModal';
 
 function App() {
-
-  const [loggedIn, setLoggedIn] = useState(false);
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-tTDGr6lbMP9klqQdC8uOXym4B8mJzbo",
@@ -39,8 +36,9 @@ function App() {
         <Route exact path = "/" component ={Dash} />
         <Route path = "/Login" component = {Login}/>
         <Route path = "/Register" component = {Register}/>
+        <Footer/>
       </Router>
-      <Footer/>
+      
       </div>
   
   );

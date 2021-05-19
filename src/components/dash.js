@@ -31,11 +31,17 @@ const [max, setMax] = useState("");
     }
 
     return ( 
+        <div> 
         <div className = "dash"> 
+        <Row> </Row>
             <h1> Welcome to DissidiaReloaded!</h1>
             <h2>play.dissidareloaded.com </h2> 
             <img className = "logo" src = {serverlogo} alt = "logo"/>
-            
+            <div className = "about"> 
+            <h1> About </h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            </div>
             <Jumbotron fluid className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
@@ -54,8 +60,8 @@ const [max, setMax] = useState("");
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
                <h5> Vote for the server here!</h5>
             </Jumbotron> 
-        </div>
         
+       </div> 
     );
 }
 export default Dash; 

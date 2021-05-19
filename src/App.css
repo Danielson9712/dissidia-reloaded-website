@@ -47,8 +47,8 @@ body {
    align-items: center;
    text-align: center;
    flex-direction: column;
-   width: 25rem;
-   height: 16.25rem;
+   width: 33rem;
+   height: 17.875rem;
 }
 
 .jumbo { 
@@ -56,8 +56,12 @@ body {
    height: 20rem;
    background: grey;
    border-radius:15%;
-   margin-left: 77rem;
-   position:flex;
+   float: right;
+   align-items: center;
+   text-align: center;
+   flex-direction: column;
+   margin:-20rem 2rem 2rem 2rem;
+   position: relative;
 }
 
 .alert { 
@@ -74,8 +78,10 @@ body {
    max-width: 80%;
  }
 .footer { 
-   margin-top: 2rem;
+   margin-top: 8rem;
    margin-bottom: 1rem;
+
+   
 }
  .footer h3, p { 
     color: white;
@@ -97,4 +103,8 @@ body {
    flex-direction: column;
    margin-top: 1rem;
    margin-right: 3rem;
+ }
+
+ .about { 
+    width: 35rem;
  }
