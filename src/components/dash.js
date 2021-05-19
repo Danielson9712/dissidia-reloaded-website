@@ -5,6 +5,7 @@ import {useHistory } from 'react-router-dom';
 import serverlogo from '../images/serverlogo.webp';
 import axios from 'axios';
 import PlayerModal from './PlayerModal';
+import Owners from './Owners';
 
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
@@ -31,7 +32,8 @@ const [max, setMax] = useState("");
     }
 
     return ( 
-        <div> 
+        <div>
+        <Owners/>
         <div className = "dash"> 
         <Row> </Row>
             <h1> Welcome to DissidiaReloaded!</h1>

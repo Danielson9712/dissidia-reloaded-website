@@ -108,3 +108,13 @@ body {
  .about { 
     width: 35rem;
  }
+
+ .owners { 
+   color: white;
+   margin-left: 3rem;
+   display: flex;
+   margin-top: 1rem;
+   width: 20%;
+   height: 5%;
+   margin-right: 0;
+ }
