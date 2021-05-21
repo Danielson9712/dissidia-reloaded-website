@@ -22,7 +22,7 @@ const [timskin, setTimSkin] = useState("");
             <Col> 
         
         <h3> Danielson9712  </h3> <img src = {danskin} alt = "skin" className = "skins"/>
-        <h3> Dhluigi</h3> <img src = {derskin} alt = "skin" className = "skins"/> 
+        <h3>dhluigi</h3> <img src = {derskin} alt = "skin" className = "skins"/> 
         <h3> Timster1996  </h3><img src = {timskin} alt = "skin" className = "skins"/>
         </Col>
         </Row>
