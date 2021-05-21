@@ -32,7 +32,8 @@ const [max, setMax] = useState("");
     }
 
     return ( 
-        <div>  <Owners/>
+        <div> 
+            <Owners/>
         <div className = "dash"> 
       
             <h1> Welcome to DissidiaReloaded!</h1>

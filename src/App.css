@@ -20,8 +20,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  display: inline-block;
-  margin-left: 6.5rem;
+  
 }
 
 .login {
@@ -61,8 +60,11 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin: 15rem 2rem 2rem;
-  position: relative;
+  margin: 30rem 2rem 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
 }
 
 .alert {
@@ -112,11 +114,28 @@ p {
 
 .owners {
   color: white;
-  margin-left: 3rem;
   display: flex;
-  margin-top: 1rem;
+  margin-top: 5rem;
   height: 10rem;
-  float: left;
-  width: 20%;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 35rem;
+  background: grey;
+  border-radius: 5%;
   margin-left: 5rem;
 }
+
+.skins {
+  width: 6rem;
+  height: 6rem;
+  display:flex;
+  margin: 1rem 1rem 1rem 1rem;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-left: 7rem !important;
+}
+
