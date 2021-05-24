@@ -35,11 +35,23 @@ const [max, setMax] = useState("");
         <div> 
             <Owners/>
         <div className = "dash"> 
-      
+         
             <h1> Welcome to DissidiaReloaded!</h1>
             <h2>play.dissidareloaded.com </h2> 
             <img className = "logo" src = {serverlogo} alt = "logo"/>
+            
             <div className = "about"> 
+             <h4 className = "tags"> Towny </h4> 
+             <div className = "space"/>
+             <h4 div className = "tags"> McMMO </h4>
+             <div className = "space"/>
+             <h4 div className = "tags"> EssentialsX </h4>
+             <div className = "space"/>
+             <h4 div className = "tags"> MobRewards </h4>
+             <div className = "space"/>
+             <h4 div className = "tags"> Vanilla </h4>
+             <div className = "space"/>
+             <h4 div className = "tags"> Economy </h4>
             <h1> About </h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>

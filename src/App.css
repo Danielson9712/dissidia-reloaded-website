@@ -60,7 +60,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin: 30rem 2rem 2rem;
+  margin: 25rem 2rem 2rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -110,12 +110,15 @@ p {
 .about {
   width: 35rem;
   font-size: 1.5rem;
+  align-items: center;
+  text-align: center;
+  
 }
 
 .owners {
   color: white;
   display: flex;
-  margin-top: 12rem;
+  margin-top: 6rem;
   height: 10rem;
   position: absolute;
   align-items: center;
@@ -139,3 +142,19 @@ p {
   margin-left: 7rem !important;
 }
 
+.tags { 
+  background: grey;
+  border-radius: 50%;
+  float: left;
+  align-items: center;
+  text-align: center;
+  margin-left: 1rem;
+  width: 10rem;
+  height: 2.5rem;
+  
+}
+
+
+
+
+   
