@@ -145,15 +145,21 @@ p {
 .tags { 
   background: grey;
   border-radius: 50%;
-  float: left;
+  float:left;
   align-items: center;
   text-align: center;
-  margin-left: 1rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
   width: 10rem;
-  height: 2.5rem;
-  
+  height: 4rem;
 }
 
+.about h4 { 
+   vertical-align: middle;
+   text-align: center;
+   margin-top: 3rem;
+   
+}
 
 
 
