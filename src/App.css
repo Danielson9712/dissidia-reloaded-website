@@ -143,15 +143,13 @@ p {
 }
 
 .tags { 
-  background: grey;
-  border-radius: 50%;
-  float:left;
-  align-items: center;
+  display:flex;
+  float: left;
   text-align: center;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  width: 10rem;
-  height: 4rem;
+  align-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 
 .about h4 { 
