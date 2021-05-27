@@ -13,6 +13,7 @@ const [players, setPlayers] = useState("");
 const [online, setOnline] = useState(false);
 const [version, setVersion] = useState(""); 
 const [max, setMax] = useState("");
+const [skin, setSkin] = useState(""); 
 
     useEffect(() => { 
         axios.get('https://mcapi.us/server/status?ip=play.dissidiareloaded.com').then((res) => {
@@ -26,6 +27,7 @@ const [max, setMax] = useState("");
         .catch((error) => { 
             console.log(error); 
         })
+        setSkin('https://crafatar.com/avatars/b33ac765-820c-4f04-8af0-e14481f48b87')
     },[])
     
     const refresh = () => { 
@@ -47,7 +49,15 @@ const [max, setMax] = useState("");
              </div>
              <div className = "about"> 
             <h1> About </h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
+            DissidiaCraft, a popular server back in the day. We run our plugins using spigot and 
+            have popular ones such as McMMO, Towny, and much more! Our server is managed, updated, 
+            and moderated frequently for a smooth, friendly, player experience. Join our community forums, 
+            make friends, and start your Dissidian adventure today! 
+            </p>
+            </div>
+            <div className = "credit"> 
+            <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
             </div>
             </div>
             <Jumbotron fluid className = "jumbo">
