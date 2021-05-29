@@ -20,7 +20,6 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  
 }
 
 .login {
@@ -64,7 +63,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  
 }
 
 .alert {
@@ -131,11 +129,10 @@ p {
 .skins {
   width: 6rem;
   height: 6rem;
-  display:flex;
+  display: flex;
   margin: 1rem 1rem 1rem 1rem;
   align-items: center;
   text-align: center;
   flex-direction: column;
   margin-left: 7rem !important;
 }
-
