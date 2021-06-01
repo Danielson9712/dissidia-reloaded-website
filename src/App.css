@@ -171,9 +171,22 @@ p {
 }
 
 .ownerSkin { 
+  margin-top: .5rem;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  width: 6rem;
+  height: 6rem;
+}
+
+.images { 
+  margin-top: 5rem;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  color:white;
+  
 }
 
    

@@ -60,6 +60,7 @@ const [skin, setSkin] = useState("");
             <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
             </div>
             </div>
+            <Gallery/>
             <Jumbotron fluid className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
