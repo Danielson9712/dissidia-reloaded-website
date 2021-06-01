@@ -50,7 +50,7 @@ const [skin, setSkin] = useState("");
              <div className = "about"> 
             <h1> About </h1>
             <p>Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
-            DissidiaCraft, a popular server back in the day. We run our plugins using spigot and 
+            DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins using spigot and 
             have popular ones such as McMMO, Towny, and much more! Our server is managed, updated, 
             and moderated frequently for a smooth, friendly, player experience. Join our community forums, 
             make friends, and start your Dissidian adventure today! 
