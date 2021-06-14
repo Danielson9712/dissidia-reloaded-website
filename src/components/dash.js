@@ -6,7 +6,6 @@ import serverlogo from '../images/serverlogo.webp';
 import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
-import Gallery from './Gallery'; 
 
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
@@ -58,10 +57,7 @@ const [skin, setSkin] = useState("");
             </div>
             <div className = "credit"> 
             <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
-            </div>
-            </div>
-            <Gallery/>
-            <Jumbotron fluid className = "jumbo">
+            </div><div className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
             
@@ -79,7 +75,10 @@ const [skin, setSkin] = useState("");
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
                <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/"> here! </a></h5>
 
-            </Jumbotron> 
+            </div> 
+            </div>
+            
+            
         
        </div> 
     );

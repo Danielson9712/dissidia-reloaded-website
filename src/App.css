@@ -49,8 +49,8 @@ body {
   width: 33rem;
   height: 17.875rem;
 }
-
-.jumbo {
+ 
+  .jumbo {
   width: 20rem;
   height: 20rem;
   background: grey;
@@ -64,6 +64,8 @@ body {
   top: 0;
   right: 0;
 }
+
+
 
 .alert {
   align-items: center;
@@ -184,3 +186,21 @@ p {
   color:white;
   
 }
+
+@media (max-width: 1500px) { 
+  .owners { 
+    display: none;
+  }
+
+  .jumbo { 
+    margin: 0 2rem;
+    margin-top: 2rem;
+    position: relative; 
+    align-items: center;
+    text-align: center;
+    float: none;
+  }
+  .credit { 
+    display: none;
+  }
+  }
