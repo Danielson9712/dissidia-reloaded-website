@@ -35,7 +35,7 @@ const PlayerModal = () => {
         { players.map(player => {
             return ( 
                 <>
-            <Row><Col><h3 className = "playerName"> {players[0].name} </h3> </Col>
+            <Row><Col><h3 className = "playerName"> {player.name} </h3> </Col>
             <Col> <img src = {player.image} className = "head"/> </Col> </Row>
             
             </>

@@ -37,7 +37,7 @@ const Footer = () => {
         <Row className = "fixRow"> 
              
         <Col className = "col1"> <h3> Join our Discord Server! </h3>
-       <img src = {discord} className = "discord"/> </Col>
+       <a href = "https://discord.gg/79Hn4JMX3q">  <img src = {discord} className = "discord" /> </a></Col>
         <Col className = "col2"> <h3> Services </h3> 
         { !loggedIn ? 
         <Link className = "link" to = "/Login"> Login </Link>
