@@ -8,6 +8,7 @@ import Register from './components/Register';
 import Login from './components/Login'; 
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
 
 function App() {
 
@@ -18,8 +19,10 @@ function App() {
     storageBucket: "minecraft-website-a445e.appspot.com",
     messagingSenderId: "989798867747",
     appId: "1:989798867747:web:5c22f9d93b47685c1ae296",
-    measurementId: "G-0HBL1RLW5T"
+    measurementId: "G-0HBL1RLW5T",
+    databaseURL: "https://minecraft-website-a445e-default-rtdb.firebaseio.com/"
   };
+
   //Initialize firebase 
   if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -27,6 +30,8 @@ function App() {
     firebase.app(); // if already initialized, use that one
 
   }
+  const database = firebase.database();
+  
   
   return (
     <div className="App"> 
@@ -36,6 +41,7 @@ function App() {
         <Route exact path = "/" component ={Dash} />
         <Route path = "/Login" component = {Login}/>
         <Route path = "/Register" component = {Register}/>
+        <Route path = "/Gallery" component = {Gallery}/>
         <Footer/>
       </Router>
       

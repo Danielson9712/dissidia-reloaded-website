@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import { FormGroup, Form, Input, Button } from 'reactstrap';
 import { useHistory } from 'react-router-dom'; 
+import serverlogo from '../images/serverlogo.png'
+
 
 const Register = () => { 
     const [email, setEmail] = useState("");
@@ -31,7 +33,7 @@ const Register = () => {
     const toLogin = () => { history.push('/Login')}
 
     return ( 
-        <div className = "register"> 
+        <div className = "login"> 
         <Form> 
             <FormGroup> 
             <div className="title"> 
@@ -58,14 +60,15 @@ const Register = () => {
             placeholder = "Password"/>
 
             <Button onClick={onSubmit} 
-            color="info" > Register </Button>
+            color="secondary" > Register </Button>
             <Button onClick = {toHome}
-            color = "info"> Back to Home</Button>
+            color = "secondary"> Back to Home</Button>
             <Button onClick = {toLogin}
-            color = "info"> Back to Login</Button>
-            
+            color = "secondary"> Back to Login</Button>
+           
             </FormGroup>
-        </Form>
+        </Form> 
+        <img className = "logo" src = {serverlogo}  alt = "logo"/>
         </div>
     );
 }

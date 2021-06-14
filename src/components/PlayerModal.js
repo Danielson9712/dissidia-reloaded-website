@@ -28,7 +28,7 @@ const PlayerModal = () => {
     },[])
     return ( 
         <div> 
-            <Button color = "primary" onClick ={toggle}> Players </Button>
+            <Button color = "primary" onClick ={toggle}> Whos Online? </Button>
             <Modal isOpen = {modal} toggle = {toggle}> 
             <ModalHeader toggle = {toggle}> Online Players</ModalHeader>
             <ModalBody> 

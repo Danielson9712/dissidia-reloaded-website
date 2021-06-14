@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react';
 import firebase from 'firebase'; 
 import {Row, Col } from 'reactstrap';
 import { useHistory, Link} from 'react-router-dom';
+import discord from '../images/discord.jpg';
 
 const Footer = () => { 
     const [loggedIn, setLoggedIn] = useState(false);
@@ -35,9 +36,9 @@ const Footer = () => {
         <div className = "footer"> 
         <Row className = "fixRow"> 
              
-        <Col> <h3> Join our Discord Server! </h3>
-        <p> Discord link goes here </p></Col>
-        <Col> <h3> Services </h3> 
+        <Col className = "col1"> <h3> Join our Discord Server! </h3>
+       <img src = {discord} className = "discord"/> </Col>
+        <Col className = "col2"> <h3> Services </h3> 
         { !loggedIn ? 
         <Link className = "link" to = "/Login"> Login </Link>
             :
@@ -47,7 +48,7 @@ const Footer = () => {
         <Link className = "link" to = "/Help"> Help </Link>
         <Row><br></br></Row>
         <Link className = "link" to = "/Forums"> Forums </Link>  </Col>
-        <Col> 
+        <Col className = "col3"> 
         <Row className = "fixRow"> <h3> Resources </h3></Row>
         <Link className = "link" to = "/Terms"> Terms of Service </Link>
         <Row><br></br></Row>

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import {useHistory} from 'react-router-dom';
 import {Button, Form, FormGroup, Row, Input, Jumbotron} from 'reactstrap';
-import serverlogo from '../images/serverlogo.webp';
+import serverlogo from '../images/serverlogo.png';
 
 const Login = () => { 
 
@@ -61,10 +61,10 @@ const Login = () => {
               placeholder="Password" />
             </Row>
            <div className = "button"> 
-            <Button onClick={authLogin} color="primary"> Sign in </Button>
-            <Button color = "primary" onClick = {toRegister}> Sign up</Button>
+            <Button onClick={authLogin} color="secondary"> Sign in </Button>
+            <Button color = "secondary" onClick = {toRegister}> Sign up</Button>
             <br></br>
-            <Button color = "primary" onClick = {googleLogin}> Sign in with google</Button>
+            <Button color = "secondary" onClick = {googleLogin}> Sign in with google</Button>
         </div>
         <img className = "logo" src = {serverlogo}  alt = "logo"/>
         </div>

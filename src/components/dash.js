@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import firebase from 'firebase'; 
 import { Button, Alert, Jumbotron, Row, Col } from 'reactstrap';
 import {useHistory } from 'react-router-dom';
-import serverlogo from '../images/serverlogo.webp';
+import serverlogo from '../images/serverlogo.png';
 import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
@@ -64,7 +64,7 @@ const [skin, setSkin] = useState("");
             <Row>
             { online ? 
             <div> 
-               <Alert className = "alert" color = "success"> Status: Online </Alert>
+               <h4><Alert className = "alert" color = "success"> Status: Online </Alert> </h4>
                <Row> <h4> Version: {version}</h4></Row> 
             <Row className = "modalLine"> 
             <Col> <h4> Players: {players}/{max}</h4></Col>
