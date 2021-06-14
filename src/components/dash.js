@@ -15,12 +15,12 @@ const [max, setMax] = useState("");
 const [skin, setSkin] = useState(""); 
 
     useEffect(() => { 
-        axios.get('https://mcapi.us/server/status?ip=play.dissidiareloaded.com').then((res) => {
+        axios.get('https://eu.mc-api.net/v3/server/ping/play.dissidiareloaded.com').then((res) => {
             console.log(res);
             setOnline(res.data.online)
-            setPlayers(res.data.players.now)
+            setPlayers(res.data.players.online)
             setMax(res.data.players.max)
-            setVersion(res.data.server.name)
+            setVersion(res.data.version.name)
             
         })
         .catch((error) => { 

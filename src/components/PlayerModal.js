@@ -10,7 +10,7 @@ const PlayerModal = () => {
     const toggle = () => setModal(!modal);
 
      useEffect(() => {
-        axios.get('https://mcapi.us/server/status?ip=play.dissidiareloaded.com').then((res) => {
+        axios.get('https://eu.mc-api.net/v3/server/ping/play.dissidiareloaded.com').then((res) => {
             const playerNames = res.data.players.sample.map(player => {
                 player.image = `https://crafatar.com/avatars/${player.id}`
                 return player;
