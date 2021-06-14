@@ -36,7 +36,7 @@ const PlayerModal = () => {
             return ( 
                 <>
             <Row><Col><h3 className = "playerName"> {players[0].name} </h3> </Col>
-            <Col> <img src = {player.image} alt="player head" className = "head"/> </Col> </Row>
+            <Col> <img src = {player.image} className = "head"/> </Col> </Row>
             
             </>
             )
