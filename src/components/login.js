@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import {useHistory} from 'react-router-dom';
-import {Button, Form, FormGroup, Row, Input, Jumbotron} from 'reactstrap';
-import serverlogo from '../images/serverlogo.png';
+import {Button, Form, FormGroup, Row, Input, Col} from 'reactstrap';
+import bluelogo from '../images/blueLogo.png';
+import redlogo from '../images/redLogo.png';
 
 const Login = () => { 
 
@@ -40,14 +41,19 @@ const Login = () => {
       }
 
     return ( 
-        <div> 
-          <Jumbotron> </Jumbotron>
+        <div className = "login"> 
+          <Row className = "fixRow"> 
+            <Col> 
+          <img src = {bluelogo} alt = "logo"/>
+          </Col>
+          <Col> 
             <Form> 
         <FormGroup>
+        
     <div className = "title"> 
               <h1> Dissidia Login</h1>
           </div>  
-          <div className = "login">   
+          <div>   
           <Row>
             <Input onChange={(e) => setEmail(e.target.value)}
               type="Email"
@@ -66,12 +72,14 @@ const Login = () => {
             <br></br>
             <Button color = "secondary" onClick = {googleLogin}> Sign in with google</Button>
         </div>
-        <img className = "logo" src = {serverlogo}  alt = "logo"/>
         </div>
-        
         </FormGroup>
         </Form> 
-        
+        </Col>
+        <Col> 
+         <img src = {redlogo} alt = "logo"/>
+        </Col>
+        </Row>
         </div>
     );
 }

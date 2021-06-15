@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios'; 
 import { Button, Modal, ModalBody, ModalHeader, Row, Col } from 'reactstrap';
-import firebase from 'firebase';
 const PlayerModal = () => { 
 
     const [modal, setModal] = useState(false); 

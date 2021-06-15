@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import firebase from 'firebase'; 
-import { FormGroup, Form, Input, Button } from 'reactstrap';
+import { FormGroup, Form, Input, Button, Row, Col } from 'reactstrap';
 import { useHistory } from 'react-router-dom'; 
-import serverlogo from '../images/serverlogo.png'
+import bluelogo from '../images/blueLogo.png';
+import redlogo from '../images/redLogo.png';
 
 
 const Register = () => { 
@@ -23,6 +24,7 @@ const Register = () => {
                 history.push("/")
                 console.log("A user was created")
             })
+                    
             .catch((error) => { 
                 console.log(error)
             })
@@ -34,6 +36,11 @@ const Register = () => {
 
     return ( 
         <div className = "login"> 
+        <Row className = "fixRow"> 
+        <Col> 
+        <img src = {bluelogo}  alt = "logo"/>
+        </Col>
+        <Col>
         <Form> 
             <FormGroup> 
             <div className="title"> 
@@ -68,7 +75,11 @@ const Register = () => {
            
             </FormGroup>
         </Form> 
-        <img className = "logo" src = {serverlogo}  alt = "logo"/>
+        </Col> 
+        <Col> 
+        <img src = {redlogo}  alt = "logo"/>
+        </Col>
+        </Row>
         </div>
     );
 }
