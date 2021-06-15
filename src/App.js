@@ -32,7 +32,6 @@ function App() {
   }
   const database = firebase.database();
   
-  
   return (
     <div className="App"> 
     
