@@ -11,25 +11,35 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [id, setId] = useState("");
     const history = useHistory(); 
+
+    
 
     const onSubmit = (e) => { 
 
         e.preventDefault();
         
+
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then( async () => { 
             await firebase.auth().currentUser.getIdToken(true)
             .then(() => { 
                 history.push("/")
                 console.log("A user was created")
+                setId(firebase.auth().currentUser.uid)
+                addUser({email, id, lastName, firstName});
             })
                     
             .catch((error) => { 
                 console.log(error)
             })
         })
+    }
 
+    const addUser = (newUser) => { 
+        const ref = firebase.firestore().collection("users");
+        ref.doc().set(newUser); 
     }
     const toHome = () => { history.push('/')}
     const toLogin = () => { history.push('/Login')}

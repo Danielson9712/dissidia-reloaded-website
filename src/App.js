@@ -2,6 +2,8 @@ import firebase from 'firebase';
 import React, {useState, useEffect} from 'react';
 import {Button } from 'reactstrap';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import 'firebase/firestore';
+
 //components 
 import Dash from './components/Dash';
 import Register from './components/Register';
@@ -30,7 +32,7 @@ function App() {
     firebase.app(); // if already initialized, use that one
 
   }
-  const database = firebase.database();
+  
   
   return (
     <div className="App"> 
