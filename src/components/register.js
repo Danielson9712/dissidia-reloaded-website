@@ -30,10 +30,7 @@ const Register = () => {
                 firebase.auth().currentUser.updateProfile({
                 displayName: firstName
             })
-            .then( () => { 
-              
-              })
-                
+            window.location.reload();
             })
                     
             .catch((error) => { 

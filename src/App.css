@@ -5,7 +5,11 @@
   text-decoration: none;
   color: white;
 }
-
+.navtext {
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
 .link:hover {
   color: grey;
 }

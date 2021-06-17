@@ -64,9 +64,6 @@ const NavBar = () => {
           <Nav className="mr-auto" navbar>
             {loggedIn ?
             <>
-            <NavItem> 
-              <NavLink> <Link className = "link" to = '/Forums'> Forums</Link>  </NavLink> 
-            </NavItem>
             <NavItem>
               <NavLink> <Link className = "link" to = '/Gallery'> Gallery</Link>  </NavLink> 
             </NavItem>
@@ -78,9 +75,9 @@ const NavBar = () => {
           </Nav> 
           </Collapse>
           {loggedIn ? 
-          <NavbarText className = "link"> Welcome back, {displayName}!</NavbarText> 
+          <NavbarText className = "navtext"> Welcome back, {displayName}!</NavbarText> 
           :
-          <NavbarText className = "link"> Sign in to view our Gallery and Forums! </NavbarText>
+          <NavbarText className = "navtext"> Sign in to view our Gallery! </NavbarText>
           }
       </Navbar>
   );
