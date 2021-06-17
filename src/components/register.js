@@ -11,7 +11,6 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [id, setId] = useState("");
     const history = useHistory(); 
 
     
@@ -27,8 +26,7 @@ const Register = () => {
             .then(() => { 
                 history.push("/")
                 console.log("A user was created")
-                setId(firebase.auth().currentUser.uid)
-                addUser({email, id, lastName, firstName});
+                addUser({email, id: firebase.auth().currentUser.uid, lastName, firstName});
             })
                     
             .catch((error) => { 
