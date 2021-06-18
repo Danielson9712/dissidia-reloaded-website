@@ -24,7 +24,9 @@ const Register = () => {
             .then(() => { 
                 history.push("/")
                 console.log("A user was created")
-                addUser({email, id: firebase.auth().currentUser.uid, lastName, firstName});
+                addUser({ email, id: firebase.auth().currentUser.uid, lastName, firstName });
+                firebase.auth().currentUser.updateProfile({
+                displayName: firstName
             })
                     
             .catch((error) => { 
