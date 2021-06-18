@@ -15,22 +15,16 @@ const Register = () => {
 
     
 
-    const onSubmit = (e) => { 
-
-        e.preventDefault();
+    const onSubmit = (e) => {
         
-
+        e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then( async () => { 
             await firebase.auth().currentUser.getIdToken(true)
             .then(() => { 
                 history.push("/")
                 console.log("A user was created")
-                addUser({email, id: firebase.auth().currentUser.uid, lastName, firstName})
-                firebase.auth().currentUser.updateProfile({
-                displayName: firstName
-            })
-            window.location.reload();
+                addUser({email, id: firebase.auth().currentUser.uid, lastName, firstName});
             })
                     
             .catch((error) => { 
