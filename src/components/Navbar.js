@@ -64,9 +64,6 @@ const NavBar = () => {
           <Nav className="mr-auto" navbar>
             {loggedIn ?
             <>
-            <NavItem>
-              <NavLink> <Link className = "link" to = '/Gallery'> Gallery</Link>  </NavLink> 
-            </NavItem>
               <NavLink> <Link className = "link" onClick = {signOut}> Logout </Link> </NavLink>
               </>
               :
