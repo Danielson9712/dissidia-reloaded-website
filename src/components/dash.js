@@ -52,7 +52,7 @@ const [skin, setSkin] = useState("");
             DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins 
             using spigot and have popular ones such as McMMO, Towny, and much more! Our server is 
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
-            Show off your town in our gallery, join our discord, make friends, 
+            join our discord, make friends, 
             and start your Dissidian adventure today! 
             </p>
             </div>
