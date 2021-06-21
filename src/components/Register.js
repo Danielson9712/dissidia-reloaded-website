@@ -22,12 +22,13 @@ const Register = () => {
         .then( async () => { 
             await firebase.auth().currentUser.getIdToken(true)
                 .then(() => {
-                    history.push("/")
+                   
                     console.log("A user was created")
                     addUser({ email, id: firebase.auth().currentUser.uid, lastName, firstName });
                     firebase.auth().currentUser.updateProfile({
                         displayName: firstName
-                    })
+                    }) 
+                    history.push("/")
                     window.location.reload();
                 })
             .catch((error) => { 
