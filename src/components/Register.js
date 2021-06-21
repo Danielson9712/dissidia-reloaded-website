@@ -28,13 +28,13 @@ const Register = () => {
                     firebase.auth().currentUser.updateProfile({
                         displayName: firstName
                     })
+                    window.location.reload();
                 })
             .catch((error) => { 
                 console.log(error)
             })
         })
     }
-
     const addUser = (newUser) => { 
         const ref = firebase.firestore().collection("users");
         ref.doc().set(newUser); 
