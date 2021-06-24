@@ -46,15 +46,14 @@ const [skin, setSkin] = useState("");
             <div className = "tags"> 
              <h3> Towny • McMMO • EssentialsX • MobRewards • ChestShops</h3> 
              </div>
-             <div className = "about"> 
+            
             <h1> About </h1>
-            <p>Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
+            <p className = "about"> Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
             DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins 
             using spigot and have popular ones such as McMMO, Towny, and much more! Our server is 
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
             Join our discord, make friends, and start your Dissidian adventure today! 
             </p>
-            </div>
             <div className = "credit"> 
             <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
             </div><div className = "jumbo">

@@ -129,13 +129,6 @@ p {
   margin-right: 3rem;
 }
 
-.about {
-  width: 42rem;
-  font-size: 1.5rem;
-  align-items: center;
-  text-align: center;
-}
-
 .owners {
   color: white;
   display: flex;
@@ -169,12 +162,6 @@ p {
   margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: 2rem;
-}
-
-.about h4 {
-  vertical-align: middle;
-  text-align: center;
-  margin-top: 3rem;
 }
 
 .credit {
@@ -241,4 +228,33 @@ p {
       position: relative;
     }
     
+  }
+
+  @media (max-width: 700px) { 
+    .logo { 
+      width: 16.5rem;
+      height: 8.9375rem;
+    }
+    .jumbo { 
+     width: 22rem;
+     height: 22rem;
+      
+    }
+
+    .about { 
+      max-width: 20rem;
+      font-size: 1rem !important;
+    }
+  }
+
+  .info { 
+    width: 30rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about { 
+    width: 40rem;
+    font-size: 1.5rem;
   }
