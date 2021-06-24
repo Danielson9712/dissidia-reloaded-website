@@ -16,7 +16,7 @@ const [timskin, setTimSkin] = useState("");
     
     return ( 
         <div className = "owners"> 
-      <Jumbotron> 
+     
         <Row>  
             <h2> Server Admins: </h2> 
             <Col> 
@@ -26,7 +26,7 @@ const [timskin, setTimSkin] = useState("");
         <h3> Timster1996  </h3><img src = {timskin} alt = "skin" className = "skins"/>
         </Col>
         </Row>
-        </Jumbotron>
+        
     </div>
     );
 }

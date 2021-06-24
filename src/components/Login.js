@@ -66,11 +66,11 @@ const Login = () => {
               name="Password"
               placeholder="Password" />
             </Row>
-           <div className = "button"> 
-            <Button onClick={authLogin} color="secondary"> Sign in </Button>
-            <Button color = "secondary" onClick = {toRegister}> Sign up</Button>
+           <div className = "buttons"> 
+            <Button className = "button" onClick={authLogin} color="secondary"> Sign in </Button>
+            <Button className = "button" color = "secondary" onClick = {toRegister}> Sign up</Button>
             <br></br>
-            <Button color = "secondary" onClick = {googleLogin}> Sign in with google</Button>
+            <Button className = "button" color = "secondary" onClick = {googleLogin}> Sign in with google</Button>
         </div>
         </div>
         </FormGroup>
