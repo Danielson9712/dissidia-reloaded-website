@@ -44,7 +44,7 @@ const [skin, setSkin] = useState("");
             
             
             <div className = "tags"> 
-             <h3> Towny • McMMO • EssentialsX • MobRewards • ChestShops</h3> 
+             <h3> Towny • McMMO • EssentialsX <br/><br/>Auctions • MobRewards • ChestShops</h3> 
              </div>
             
             <h1> About </h1>
@@ -72,7 +72,7 @@ const [skin, setSkin] = useState("");
                </div>
                : 
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
-               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/"> here! </a></h5>
+               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote"> here! </a></h5>
 
             </div> 
             </div>
