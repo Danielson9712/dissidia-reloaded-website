@@ -44,7 +44,7 @@ const Login = () => {
         <div className = "login"> 
           <Row className = "fixRow"> 
             <Col> 
-          <img src = {bluelogo} alt = "logo"/>
+          <img src = {bluelogo} className = "bluelogo" alt = "logo"/>
           </Col>
           <Col> 
             <Form> 
@@ -77,7 +77,7 @@ const Login = () => {
         </Form> 
         </Col>
         <Col> 
-         <img src = {redlogo} alt = "logo"/>
+         <img src = {redlogo} className = "redlogo" alt = "logo"/>
         </Col>
         </Row>
         </div>
