@@ -14,11 +14,9 @@ const Register = () => {
     const history = useHistory(); 
     const [error, setError] = useState(false);
 
-    const onSubmit = (e) => { 
-
-        e.preventDefault();
+    const onSubmit = (e) => {
         
-
+        e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then( async () => { 
             await firebase.auth().currentUser.getIdToken(true)
@@ -43,7 +41,6 @@ const Register = () => {
     const onDismiss = () => {
         setError(false)
     }
-
     const addUser = (newUser) => { 
         const ref = firebase.firestore().collection("users");
         ref.doc().set(newUser); 

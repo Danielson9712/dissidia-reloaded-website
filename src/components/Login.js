@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import firebase from 'firebase'; 
 import {useHistory} from 'react-router-dom';
-import {Button, Form, FormGroup, Row, Input, Col} from 'reactstrap';
+import {Button, Form, FormGroup, Row, Input, Col, Alert} from 'reactstrap';
 import bluelogo from '../images/blueLogo.png';
 import redlogo from '../images/redLogo.png';
 
@@ -10,6 +10,7 @@ const Login = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
   
     const history = useHistory();
     const toHome = () => { history.push('/')}
@@ -24,6 +25,7 @@ const Login = () => {
         })
         .catch((error) => {
           console.log(error)
+          setError(true);
         })
       }
 
@@ -39,7 +41,9 @@ const Login = () => {
         history.push('/');
       
       }
-
+      const onDismiss = () => {
+        setError(false)
+    }
     return ( 
         <div className = "login"> 
           <Row className = "fixRow"> 
@@ -80,6 +84,9 @@ const Login = () => {
          <img src = {redlogo} className = "redlogo" alt = "logo"/>
         </Col>
         </Row>
+        <Row className = "centerRow"> 
+        <Alert color = "danger" className = "error" isOpen={error} toggle = {onDismiss}> Invalid Credentials. </Alert>
+       </Row>
         </div>
     );
 }
