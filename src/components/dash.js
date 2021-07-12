@@ -52,7 +52,7 @@ const [skin, setSkin] = useState("");
             DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins 
             using spigot and have popular ones such as McMMO, Towny, and much more! Our server is 
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
-            Join our discord, make friends, and start your Dissidian adventure today! 
+            Join our discord, make friends, and start your Dissidian adventure today!
             </p>
             <div className = "credit"> 
             <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
@@ -72,7 +72,7 @@ const [skin, setSkin] = useState("");
                </div>
                : 
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
-               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote"> here! </a></h5>
+               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" target = "_blank" rel = "noopener noreferrer"> here! </a></h5>
 
             </div> 
             </div>
