@@ -220,6 +220,12 @@ p {
     margin-left: 4rem;
   }
 
+  .hamburger { 
+    width: 2rem;
+    height: 2rem;
+    border: none !important;
+  }
+
   @media (max-width: 780px) { 
     .footer { 
       text-align: center;
@@ -244,6 +250,12 @@ p {
     .about { 
       max-width: 20rem;
       font-size: 1rem !important;
+    }
+  }
+
+  @media (max-width: 770px) { 
+    .navtext { 
+      display: none;
     }
   }
 
