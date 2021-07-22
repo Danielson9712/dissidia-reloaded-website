@@ -4,6 +4,9 @@
 .link {
   text-decoration: none;
   color: white;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 .navtext {
   text-decoration: none;
@@ -96,15 +99,21 @@ body {
   border: none;
   flex-direction: column;
 }
-.fixRow {
-  margin-right: 12px !important;
-  max-width: 80%;
+.fixRow { 
+  margin: 0 !important;
 }
 .footer {
-  margin-top: 8rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 3rem !important;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col2 { 
+  justify-content: center;
+  align-items: center;
+  
 }
 .footer h3,
 p {
@@ -214,18 +223,29 @@ p {
   }
   
 }
-  .discord { 
-    max-width:5rem;
-    max-height: 5rem;
-    margin-left: 4rem;
+  
+  .discimg { 
+    width: 22.5rem;
+    height: 8.25rem;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    
   }
-
+  .discord { 
+    align-items: center;
+    text-align: center;
+  }
+  .footer p { 
+    text-align: center;
+    margin-top:2rem;
+  }
   .hamburger { 
     width: 2rem;
     height: 2rem;
     border: none !important;
   }
-
+ 
   @media (max-width: 780px) { 
     .footer { 
       text-align: center;
