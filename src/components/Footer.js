@@ -34,27 +34,18 @@ const Footer = () => {
 
     return ( 
         <div className = "footer"> 
-        
-        <Row> 
-             <Row> 
-          <img src = {discord} alt = "disc" className = "discord"/> 
+        <Col> 
+        <Row>
+          <Col className = "discord"> 
+             <a href = "https://discord.gg/79Hn4JMX3q"
+             target = "_blank" rel = "noopener noreferrer"> 
+            <img src = {discord} alt = "disc" className = "discimg"/> </a>
+       </Col> 
+       </Row>
+        <Row className = "fixRow"> 
+        <p> Copyright &copy; Daniel Christenson, all rights reserved.</p>
         </Row>
-        <Col className = "col2"> <h3> Services </h3> 
-        { !loggedIn ? 
-        <Link className = "link" to = "/Login"> Login </Link>
-            :
-        <Link className = "link" onClick = {signOut} > Logout </Link> 
-        } 
-        <Row><br></br></Row>
-        <Link className = "link"> Gallery </Link>
-        <Row><br></br></Row>
-        <Link className = "link"> Forums </Link>  </Col>
-        <Col className = "col3"> 
-        <Row className = "fixRow"> <h3> Social Media </h3></Row>
         </Col>
-        
-        </Row>
-        
         </div>
         
     );
