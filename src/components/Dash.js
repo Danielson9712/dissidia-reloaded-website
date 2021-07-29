@@ -7,6 +7,7 @@ import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
 
+
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
 const [online, setOnline] = useState(false);
@@ -44,20 +45,18 @@ const [skin, setSkin] = useState("");
             
             
             <div className = "tags"> 
-             <h3> Towny • McMMO • EssentialsX • MobRewards • ChestShops</h3> 
+             <h3> Towny • McMMO • EssentialsX <br/><br/>Auctions • MobRewards • ChestShops</h3> 
              </div>
-             <div className = "about"> 
+            
             <h1> About </h1>
-            <p>Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
+            <p className = "about"> Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
             DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins 
             using spigot and have popular ones such as McMMO, Towny, and much more! Our server is 
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
-            Join our discord, make friends, and start your Dissidian adventure today! 
+            Join our discord, make friends, and start your Dissidian adventure today!
             </p>
-            </div>
-            <div className = "credit"> 
-            <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
-            </div><div className = "jumbo">
+            
+            <div className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
             
@@ -73,12 +72,11 @@ const [skin, setSkin] = useState("");
                </div>
                : 
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
-               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/"> here! </a></h5>
+               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" 
+               target = "_blank" rel = "noopener noreferrer"> here! </a></h5>
 
             </div> 
             </div>
-            
-            
         
        </div> 
     );

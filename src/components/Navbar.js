@@ -11,7 +11,8 @@ import {
 } from 'reactstrap';
 import firebase from 'firebase';
 import { useHistory, Link} from 'react-router-dom';
-import {doc, getDoc } from 'firebase/firestore';
+import Hamburger from '../images/hamburger.png'
+
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,14 +60,16 @@ const NavBar = () => {
         </NavbarBrand>
       </Link>
 
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler onClick={toggle}> 
+        <img src = {Hamburger} alt = "ham" className = "hamburger"/> 
+        </NavbarToggler>
         <Collapse isOpen = {isOpen} navbar> 
           <Nav className="mr-auto" navbar>
             {loggedIn ?
             <>
-            <NavItem>
+             <NavItem>
               <NavLink> <Link className = "link" to = '/Gallery'> Gallery</Link>  </NavLink> 
-            </NavItem>
+            </NavItem> 
               <NavLink> <Link className = "link" onClick = {signOut}> Logout </Link> </NavLink>
               </>
               :
@@ -77,7 +80,7 @@ const NavBar = () => {
           {loggedIn ? 
           <NavbarText className = "navtext"> Welcome back, {displayName}!</NavbarText> 
           :
-          <NavbarText className = "navtext"> Sign in to view our Gallery! </NavbarText>
+          <NavbarText className = "navtext"> </NavbarText>
           }
       </Navbar>
   );
