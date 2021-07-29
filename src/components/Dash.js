@@ -7,6 +7,7 @@ import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
 
+
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
 const [online, setOnline] = useState(false);
@@ -54,9 +55,8 @@ const [skin, setSkin] = useState("");
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
             Join our discord, make friends, and start your Dissidian adventure today!
             </p>
-            <div className = "credit"> 
-            <h3> Original DissidaCraft owner: Matthew99144 aka Syllbia <img src = {skin} alt = "skin" className = "ownerSkin" /></h3>
-            </div><div className = "jumbo">
+            
+            <div className = "jumbo">
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
             
@@ -77,8 +77,6 @@ const [skin, setSkin] = useState("");
 
             </div> 
             </div>
-            
-            
         
        </div> 
     );

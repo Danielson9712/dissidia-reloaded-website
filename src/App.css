@@ -290,3 +290,29 @@ p {
     width: 40rem;
     font-size: 1.5rem;
   }
+
+  .gallery { 
+    margin: 0;
+    padding: 0;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2rem;
+    min-height: 60vh;
+  }
+
+  .img-container { 
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .img-container img { 
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+  .img-container img:hover { 
+    transform: scale(1.2);
+  }
