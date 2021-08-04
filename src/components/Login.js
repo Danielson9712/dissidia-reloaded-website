@@ -29,16 +29,23 @@ const Login = () => {
         })
       }
 
-      const googleLogin = () => { 
-        firebase.auth()
-        .signInWithPopup(provider)
-        .then((result) => {
-          /** @type {firebase.auth.OAuthCredential} */
-          console.log(result);
-        }).catch((error) => {
-         console.log(error);
-        });
-        history.push('/');
+  const googleLogin = async () => {
+    try {
+      const result = await firebase.auth().signInWithPopup(provider);
+      console.log(result);
+      history.push('/');
+    } catch(e) {
+      console.log(e);
+    }
+        // firebase.auth()
+        // .signInWithPopup(provider)
+        // .then((result) => {
+        //   /** @type {firebase.auth.OAuthCredential} */
+        //   console.log(result);
+        // }).catch((error) => {
+        //  console.log(error);
+        // });
+        // history.push('/');
       
       }
       const onDismiss = () => {
