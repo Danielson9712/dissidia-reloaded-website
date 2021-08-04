@@ -72,7 +72,9 @@ const [skin, setSkin] = useState("");
                </div>
                : 
                <Alert className = "alert" color = "danger "> Status: Offline </Alert> } </Row>
-               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" target = "_blank" rel = "noopener noreferrer"> here! </a></h5>
+               <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" 
+               target = "_blank" 
+               rel = "noopener noreferrer"> here! </a></h5>
 
             </div> 
             </div>
