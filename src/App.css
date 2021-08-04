@@ -225,16 +225,37 @@ p {
 }
   
   .discimg { 
-    width: 22.5rem;
-    height: 8.25rem;
+    width: 20rem;
+    height: 7.25rem;
     align-items: center;
     text-align: center;
     display: inline-block;
     
   }
+
+  @media (max-width: 320px){ 
+    .discimg { 
+      max-width: 250px;
+      max-height: 100px;
+    }
+    .img-container { 
+      transition: none;
+      max-width: 320px;
+    }
+  }
+  @media (max-width: 280px){ 
+    .discimg { 
+      max-width: 260px;
+      max-height: 100px;
+    }
+    .img-container { 
+      max-width: 280px;
+    }
+  }
   .discord { 
     align-items: center;
     text-align: center;
+   
   }
   .footer p { 
     text-align: center;
@@ -296,7 +317,7 @@ p {
     padding: 0;
     display: grid;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2rem;
     min-height: 60vh;
   }

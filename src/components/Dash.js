@@ -6,6 +6,7 @@ import serverlogo from '../images/serverlogo.png';
 import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
+import Gallery from './Gallery';
 
 
 const Dash = (props) => { 
@@ -30,12 +31,8 @@ const [skin, setSkin] = useState("");
         setSkin('https://crafatar.com/avatars/b33ac765-820c-4f04-8af0-e14481f48b87')
     },[])
     
-    const refresh = () => { 
-        
-    }
-
     return ( 
-        <div> 
+        <div className = "text"> 
             <Owners/>
         <div className = "dash"> 
          
@@ -75,10 +72,11 @@ const [skin, setSkin] = useState("");
                <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" 
                target = "_blank" 
                rel = "noopener noreferrer"> here! </a></h5>
-
-            </div> 
+            </div>  
+           
             </div>
-        
+            <h3> Check out our server! </h3>
+         <Gallery/>
        </div> 
     );
 }
