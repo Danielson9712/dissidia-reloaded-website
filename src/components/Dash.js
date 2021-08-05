@@ -7,7 +7,7 @@ import axios from 'axios';
 import PlayerModal from './PlayerModal';
 import Owners from './Owners';
 import Gallery from './Gallery';
-
+import {spawn3} from './index.js';
 
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
@@ -32,7 +32,8 @@ const [skin, setSkin] = useState("");
     },[])
     
     return ( 
-        <div className = "text"> 
+        <div> 
+      
             <Owners/>
         <div className = "dash"> 
          
@@ -44,16 +45,17 @@ const [skin, setSkin] = useState("");
             <div className = "tags"> 
              <h3> Towny • McMMO • EssentialsX <br/><br/>Auctions • MobRewards • ChestShops</h3> 
              </div>
-            
+            <div className = "about"> 
             <h1> About </h1>
-            <p className = "about"> Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
+            <p> Welcome to DissidiaReloaded! We are a small, 24/7 mostly vanilla server made to revive 
             DissidiaCraft, a popular server we knew and loved back in the day. We run our plugins 
             using spigot and have popular ones such as McMMO, Towny, and much more! Our server is 
             managed, updated, and moderated frequently for a smooth, friendly, player experience. 
             Join our discord, make friends, and start your Dissidian adventure today!
             </p>
-            
+            </div>
             <div className = "jumbo">
+                 
             <Row> <h1> Server Info</h1> </Row>
             <Row> <h5> Server ip: play.dissidiareloaded.com </h5></Row>
             
@@ -72,11 +74,10 @@ const [skin, setSkin] = useState("");
                <h5> Vote for the server <a href = "https://www.planetminecraft.com/server/dissidia-reloaded/vote" 
                target = "_blank" 
                rel = "noopener noreferrer"> here! </a></h5>
-            </div>  
-           
+           </div>  
+            <Gallery/>
             </div>
-            <h3> Check out our server! </h3>
-         <Gallery/>
+        
        </div> 
     );
 }

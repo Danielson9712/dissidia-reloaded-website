@@ -4,11 +4,13 @@ import { Input } from 'reactstrap';
 import { spawn1, spawn2, spawn3, spawn4, town1, town2, town3, 
          smlspawn1, smlspawn2, smlspawn3, smlspawn4, smltown1, smltown2, smltown3 } 
 from './index.js';
-
+import { Jumbotron } from 'reactstrap';
 const Gallery = () => {
 
     return (
-        <div className = "gallery">
+            <Jumbotron className = "jumbopics"> 
+            <h3> Check out our server! </h3>
+                <div className = "gallery"> 
             <div className = "img-container"> 
             <img 
             src = {smlspawn1}
@@ -36,7 +38,9 @@ const Gallery = () => {
             data-original = {town3}
             />
             </div>  
-        </div>
+            </div>
+            </Jumbotron>
+       
     );
 }
     

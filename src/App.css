@@ -17,8 +17,21 @@
   color: grey;
 }
 body {
-  background-image: url(images/sitebackground.jpg);
-  background-size: cover;
+  background-image: url("./images/sitebackground.png"), url("./images/spawn3.png");
+  background-position: right bottom, left top;
+}
+
+@media (max-width: 500px) { 
+   body { 
+     background-image: url("./images/smlspawn3.png");
+     background-size: 30rem 30rem;
+   }
+}
+@media (max-width: 700px) { 
+  body { 
+    background-image: url("./images/smlspawn3.png");
+    background-size: 40rem 40rem;
+  }
 }
 
 .dash {
@@ -52,7 +65,7 @@ body {
 
 
 .title {
-  color: white;
+ color: white;
   display: flex;
   align-items: center;
   text-align: center;
@@ -64,19 +77,19 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  width: 33rem;
-  height: 17.875rem;
+  width: 45rem;
+  height: 25rem;
 }
  
 .jumbo {
   width: 25rem;
   height: 25rem;
-  background: grey;
+  background-color: grey;
   border-radius: 15%;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  margin: 20.5rem 0.5rem 2rem 2rem;
+  margin: 45rem 0.5rem 2rem 2rem;
   padding: 2rem 2rem 2rem 2rem;
   position: absolute;
   top: 0;
@@ -115,10 +128,6 @@ body {
   align-items: center;
   
 }
-.footer h3,
-p {
-  color: white;
-}
 
 .modalLine {
   flex-direction: row;
@@ -139,9 +148,8 @@ p {
 }
 
 .owners {
-  color: white;
   display: flex;
-  margin-top: 6rem;
+  margin-top: 41.5rem;
   height: 10rem;
   position: absolute;
   align-items: center;
@@ -152,6 +160,7 @@ p {
   background: grey;
   border-radius: 5%;
   margin-left: 5rem;
+  color: white;
 }
 
 .skins {
@@ -173,19 +182,6 @@ p {
   margin-bottom: 2rem;
 }
 
-.credit {
-  color: white;
-  display: flex;
-  height: 10rem;
-  align-items: center;
-  text-align: center;
-  margin-top: 4rem;
-  width: 30rem;
-  height: 15rem;
-  background: grey;
-  border-radius: 5%;
-}
-
 .ownerSkin { 
   margin-top: .5rem;
   align-items: center;
@@ -201,7 +197,6 @@ p {
   text-align: center;
   flex-direction: column;
   display: flex;
-  color:white;
   
 }
 
@@ -217,6 +212,7 @@ p {
     align-items: center;
     text-align: center;
     float: none;
+    color: white;
   }
   .credit { 
     display: none;
@@ -310,29 +306,46 @@ p {
   .about { 
     width: 40rem;
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
 
   .gallery { 
-    margin: 0;
+    margin: 1rem;
     padding: 0;
     display: grid;
     box-sizing: border-box;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
-    min-height: 60vh;
+    text-align: center;
+    align-items: center;
+    color: grey;
+  }
+
+  .jumbopics { 
+    margin-top: 5rem;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width :30rem;
+    background-color: grey;
   }
 
   .img-container { 
     text-align: center;
     align-items: center;
     overflow: hidden;
+    color:grey
   }
   .img-container img { 
-    width: 90%;
-    height: 90%;
+    width:10rem;
+    height: 10rem;
     object-fit: cover;
     transition: all 0.3s ease-out;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
   }
   .img-container img:hover { 
     transform: scale(1.2);
