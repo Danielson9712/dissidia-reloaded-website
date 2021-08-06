@@ -17,8 +17,8 @@
   color: grey;
 }
 body {
-  background-image: url("./images/sitebackground.png"), url("./images/spawn3.png");
-  background-position: right bottom, left top;
+  background-image: url("./images/sitebackground.png");
+  
 }
 
 @media (max-width: 500px) { 
@@ -41,7 +41,13 @@ body {
   text-align: center;
   flex-direction: column;
 }
-
+.header { 
+  position: absolute;
+}
+.header2 { 
+  position: absolute;
+  margin-top: 3rem;
+}
 .login {
   display: flex;
   align-items: center;
@@ -350,3 +356,8 @@ body {
   .img-container img:hover { 
     transform: scale(1.2);
   }
+  .spawn { 
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+}

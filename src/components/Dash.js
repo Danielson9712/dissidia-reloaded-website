@@ -33,12 +33,12 @@ const [skin, setSkin] = useState("");
     
     return ( 
         <div> 
-      
+      <img src = {spawn3} alt = "spawn" className = "spawn"/>
             <Owners/>
         <div className = "dash"> 
          
-            <h1> Welcome to DissidiaReloaded!</h1>
-            <h2>play.dissidareloaded.com </h2> 
+            <h1 className = "header"> Welcome to DissidiaReloaded!</h1>
+            <h2 className = "header2">play.dissidareloaded.com </h2> 
             <img className = "logo" src = {serverlogo} alt = "logo"/>
             
             
