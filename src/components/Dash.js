@@ -8,6 +8,7 @@ import PlayerModal from './PlayerModal';
 import Owners from './Owners';
 import Gallery from './Gallery';
 import {spawn3} from './index.js';
+import bluelogo from '../images/blueLogo.png';
 
 const Dash = (props) => { 
 const [players, setPlayers] = useState("");
@@ -34,14 +35,11 @@ const [skin, setSkin] = useState("");
     return ( 
         <div> 
       <img src = {spawn3} alt = "spawn" className = "spawn"/>
-            <Owners/>
+           <img src = {bluelogo} className = "bluelogo"/>
         <div className = "dash"> 
          
             <h1 className = "header"> Welcome to DissidiaReloaded!</h1>
             <h2 className = "header2">play.dissidareloaded.com </h2> 
-            <img className = "logo" src = {serverlogo} alt = "logo"/>
-            
-            
             <div className = "tags"> 
              <h3> Towny • McMMO • EssentialsX <br/><br/>Auctions • MobRewards • ChestShops</h3> 
              </div>
